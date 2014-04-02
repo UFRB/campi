@@ -35,23 +35,23 @@ class Building(models.Model):
         ('limited', _(u'Limited Accessibility')),
         )
 
-    name = models.CharField(max_length=200, unique=True)
+    name = models.CharField(max_length=200, blank=True)
     osmid = models.CharField(max_length=15, unique=True)
-    wheelchair = models.CharField(choices=WHEEL_STATUS, max_length=100, blank=True)
+    wheelchair = models.CharField(choices=WHEEL_STATUS, max_length=10, blank=True)
     polygon = models.PolygonField()
     objects = models.GeoManager()
 
     def __unicode__(self):
-        return self.name
+        return '%s (%s)' % (self.name, self.osmid)
 
 
 class Sector(models.Model):
 
     name = models.CharField(max_length=200)
-    parent = models.ForeignKey('self')
-    services = models.ManyToManyField(Service)
+    parent = models.ForeignKey('self', blank=True)
+    services = models.ManyToManyField(Service, blank=True)
     site = models.URLField(max_length=200, blank=True)
-    phones = models.ManyToManyField(Phone)
+    phones = models.ManyToManyField(Phone, blank=True)
     address = models.CharField(max_length=255, blank=True)
     building = models.ForeignKey(Building)
     objects = models.GeoManager()

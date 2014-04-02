@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2014-03-17T12:54:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/160025283",
+      "properties": {
+        "@id": "way/160025283",
+        "building": "yes",
+        "building:levels": "2",
+        "name": "Prédio da Reitoria",
+        "operator": "UFRB - Universidade Federal do Recôncavo da Bahia"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -39.0878456,
+              -12.6585912
+            ],
+            [
+              -39.0878761,
+              -12.6587191
+            ],
+            [
+              -39.0877946,
+              -12.6587376
+            ],
+            [
+              -39.0878789,
+              -12.6590907
+            ],
+            [
+              -39.0878456,
+              -12.6585912
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
