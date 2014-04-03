@@ -1,3 +1,8 @@
-from django.contrib import admin
+from django.contrib.gis import admin
 
-# Register your models here.
+from .models import Building, Phone, Sector, Service
+
+admin.site.register(Building, admin.OSMGeoAdmin)
+admin.site.register(Phone)
+admin.site.register(Sector)
+admin.site.register(Service)
